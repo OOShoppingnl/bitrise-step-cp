@@ -1,0 +1,43 @@
+title: Copy
+summary: This copys file(s) rustig
+description: This copys file(s) rustig
+published_at: 2019-10-30T12:07:20.751143473Z
+website: https://hatsa.com
+source:
+  git: https://github.com/OOShoppingnl/bitrise-step-cp.git
+  commit: edfe20af6f02454977723396e9f6a98889462db8
+host_os_tags:
+- osx-10.11
+type_tags:
+- artifact-info
+toolkit:
+  bash:
+    entry_file: step.sh
+deps:
+  brew:
+  - name: git
+  apt_get:
+  - name: git
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+inputs:
+  - cp_from: null
+    opts:
+      description: |
+        The file you want to copy
+      is_required: true
+      summary: From
+      title: From
+  - cp_to: null
+    opts:
+      description: |
+        The place you want the file to be
+      is_required: true
+      summary: To
+      title: To
+outputs:
+- NEW_LOCATION: null
+  opts:
+    summary: The new file location
+    title: The new file location

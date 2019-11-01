@@ -6,8 +6,6 @@ File_Name=$(basename "$cp_to")
 Dir_Path="${cp_to/$File_Name}"
 Dir_Path=${Dir_Path%?}
 
-echo $Dir_Path
-
 if [[ -d "$Dir_Path" ]]; then
   echo "$Dir_Path exists"
   else

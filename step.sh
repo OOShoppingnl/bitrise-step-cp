@@ -15,6 +15,6 @@ if [[ -d "$Dir_Path" ]]; then
   echo "Created directory: $Dir_Path"
 fi
 
-cp $cp_from $cp_to
+cp "${cp_from}" "${cp_to}"
 
 envman add --key NEW_LOCATION -- value $cp_to
